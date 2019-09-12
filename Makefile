@@ -1,5 +1,5 @@
 bcc: main.o jackio.o
-	g++ -g -o bcc main.o jackio.o -laubio -ljack
+	g++ -g -o bcc main.o jackio.o -laubio -ljack -lzmq -lpthread
 
 jackio.o: src/jackio.cpp include/jackio.hpp include/aubio_priv.hpp
 	g++ -c src/jackio.cpp -laubio
